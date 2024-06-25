@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'wearables_integration',
 
     'rest_framework',
+    'rest_framework_simplejwt',
 ]
 
 REST_FRAMEWORK = {
@@ -57,7 +58,11 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PARSER_CLASSES': [
         'rest_framework.parsers.JSONParser',
-    ]
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        # outros autenticadores, se houver
+    ],
 }
 
 MIDDLEWARE = [
@@ -97,9 +102,9 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dresslert',
+        'NAME': 'database',
         'USER': 'user',
-        'PASSWORD': 'Lulu@1903',
+        'PASSWORD': 'password',
         'HOST': 'database',  # Nome do serviço do banco de dados no docker-compose
         'PORT': '5432',
     }
@@ -136,6 +141,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+AUTH_USER_MODEL = 'users.User'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/

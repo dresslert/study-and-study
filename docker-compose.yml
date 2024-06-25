@@ -19,7 +19,9 @@ services:
     volumes:
       - ./frontend:/app
     ports:
-      - "3000:3005"
+      - "3005:3000"
+    expose:
+      - "3005"
 
   database:
     build:
