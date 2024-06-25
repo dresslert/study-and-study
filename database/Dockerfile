@@ -5,7 +5,7 @@ FROM postgres:14
 # COPY init.sql /docker-entrypoint-initdb.d/
 
 # Defina as variáveis de ambiente necessárias
-ENV POSTGRES_USER=user
+ENV POSTGRES_USER=gabriel
 ENV POSTGRES_PASSWORD=Lulu@1903
 ENV POSTGRES_DB=dresslert
 
