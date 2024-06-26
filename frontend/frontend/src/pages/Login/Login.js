@@ -6,6 +6,7 @@ import {
   LoginInput,
   LoginButton,
   LoginError,
+  BackgroundOverlay,
 } from './Login.styled';
 
 function Login() {
@@ -15,7 +16,6 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aqui você pode adicionar a lógica de autenticação
     if (username === '' || password === '') {
       setError('Por favor, preencha todos os campos.');
     } else {
@@ -28,6 +28,7 @@ function Login() {
 
   return (
     <LoginContainer>
+      <BackgroundOverlay />
       <LoginForm onSubmit={handleSubmit}>
         <LoginTitle>Login</LoginTitle>
         {error && <LoginError>{error}</LoginError>}

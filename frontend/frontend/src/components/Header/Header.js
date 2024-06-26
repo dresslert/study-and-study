@@ -1,8 +1,9 @@
 import React from 'react';
+
 import {
   HeaderContainer,
   Navbar,
-  NavLink,
+  StyledNavLink,
   NavLinkRight,
 } from './Header.styled';
 
@@ -10,7 +11,7 @@ function Header() {
   return (
     <HeaderContainer>
       <Navbar>
-        <NavLink to="/">Home</NavLink>
+        <StyledNavLink to="/">Home</StyledNavLink>
         <NavLinkRight to="/login">Login</NavLinkRight>
       </Navbar>
     </HeaderContainer>

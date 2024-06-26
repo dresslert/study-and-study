@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
-  background-color: #282c34;
+  background-color: transparent; /* Tornar o fundo transparente */
   color: white;
   padding: 10px;
   text-align: center;
+  flex-shrink: 0;
 `;
 
 function Footer() {
